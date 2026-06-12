@@ -144,7 +144,7 @@ async function iniciarBot() {
         const textoCitado = (quotedMsg?.conversation || quotedMsg?.extendedTextMessage?.text || "").toLowerCase();
 
         // Regra do Roketo: O usuário digitou "!roketo" OU marcou uma mensagem com a assinatura do Roketo
-        const acionarRoketo = mensagemTexto.includes('!roketo') || textoCitado.includes('aqui é o roketo');
+        const acionarRoketo = mensagemTexto.includes('!roketo') || textoCitado.includes('roketo falando');
 
         // Regra do Valval: O usuário digitou "!valval" OU marcou uma mensagem com a assinatura do Valval
         const acionarValval = mensagemTexto.includes('!valval') || textoCitado.includes('aqui é o valval');
