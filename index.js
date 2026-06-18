@@ -6,6 +6,9 @@ const play = require('play-dl'); // Para baixar o áudio do YouTube
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const qrcode = require('qrcode-terminal'); // <-- Nosso velho amigo voltou!
 const Parser = require('rss-parser');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 const parser = new Parser();
 
 // Correção no import: sem as chaves {} para importar o objeto JSON inteiro
@@ -395,5 +398,15 @@ async function iniciarBot() {
     });
 }
 
+// ==========================================
+// ROTA WEB (Apenas para o Render não desligar o servidor)
+// ==========================================
+app.get('/', (req, res) => {
+    res.send('Motor do Bot funcionando 100%!');
+});
+
+app.listen(port, () => {
+    console.log(`🌐 Servidor Web de suporte rodando na porta ${port}`);
+});
 // Liga tudo
 iniciarBot();
