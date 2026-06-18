@@ -405,8 +405,10 @@ app.get('/', (req, res) => {
     res.send('Motor do Bot funcionando 100%!');
 });
 
-app.listen(port, () => {
+// A adição do '0.0.0.0' obriga o servidor a abrir as portas para a internet
+app.listen(port, '0.0.0.0', () => {
     console.log(`🌐 Servidor Web de suporte rodando na porta ${port}`);
 });
+
 // Liga tudo
 iniciarBot();
