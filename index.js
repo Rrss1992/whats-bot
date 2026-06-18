@@ -61,7 +61,7 @@ const conversaRoketo = modeloRoketo.startChat({ history: [] });
 
 // Cérebro 3: Nitro (O Agente Inteligente)
 const modeloNitro = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash', // Melhor modelo atual para buscas de conhecimentos gerais e agilidade
+    model: 'gemini-3.1-flash-lite', // Melhor modelo atual para buscas de conhecimentos gerais e agilidade
     systemInstruction: `Sua identidade: Nitro. Você é um assistente virtual altamente inteligente, nos moldes do Gemini.
     
     Regras de Comportamento:
