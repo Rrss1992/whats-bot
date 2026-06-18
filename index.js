@@ -67,7 +67,7 @@ const modeloNitro = genAI.getGenerativeModel({
     model: 'gemini-3.1-flash-lite', 
     
     // LIGANDO O WI-FI: Isso autoriza o bot a pesquisar no Google em tempo real!
-    tools: [{ googleSearch: {} }], 
+    // código comentado por erro --> tools: [{ googleSearch: {} }], 
     
     systemInstruction: `Sua identidade: Nitro. Você é um assistente virtual altamente inteligente.
     
