@@ -127,7 +127,7 @@ async function iniciarBot() {
             // AUTOMAÇÃO DE LEMBRETE (Fica aqui dentro para garantir que o sock existe)
             // ==========================================
             cron.schedule('0 10,23 20-30 * *', () => {
-                const mensagemLembrete = '🚨 Bora pagar o Server Galera - Aqui é o BotValVal falando >.<';
+                const mensagemLembrete = '🚨 Senhores, server vence dia 25 - Aqui é o BotValVal falando >.<';
                 sock.sendMessage(idGrupoValheim, { text: mensagemLembrete })
                     .then(() => console.log('⏰ Lembrete do servidor de Valheim enviado!'))
                     .catch(erro => console.log('❌ Erro no lembrete do Valheim:', erro));
